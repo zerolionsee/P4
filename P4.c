@@ -17,6 +17,7 @@ struct Book
   char name[20];
   short price;
 };
+#include <string.h>
 int main()
 {
   struct Book b1 = {"C语言程序设计", 55};
@@ -29,7 +30,9 @@ int main()
   printf("书名:%s\n", b1.name);
   printf("价格:%d\n",b1.price);
   b1.price = 15;
+  strcpy(b1.name, "c++");
   printf("修改后的价格:%d\n",b1.price);
+  printf("修改后的书名:%s\n",b1.name);
   return 0;
 
 }
